@@ -1,0 +1,32 @@
+
+#search{
+  zoom: 2;
+  width: 250px;
+  
+}
+.cards{
+  border:blue 1px solid;
+}
+.resultCards{
+  height: 500px;
+  width:300px;
+  overflow-y: auto;
+}
+.matched{
+  color: blue;
+  font-weight: bold;
+}
+.noSelect{
+  background: none;
+}
+.select{
+  background: grey;
+}
+.card{
+  background: grey;
+}
+.noUser{
+
+  width: 295px;
+  height: 200px;
+}

@@ -1,0 +1,29 @@
+<div class="container">
+  <div>
+    <div class="grid searchgrid">
+      <span id="searchSpan">
+        <input type="text" ng-keydown="main.getkeys($event)" id="search" ng-model="main.filterText" placeholder="Search User by name,id,address,items">
+      </span>
+
+    </div>
+  </div>
+
+  <div class="resultCards" ng-keydown="main.getkeys($event)" tabindex="0">
+
+    <div ng-if="main.filterText.length!=0" class="cards" ng-repeat="i in main.itemsFiltered=(main.items| customFilter:main.filterText)">
+      <div id={{i.id}} ng-class="i.cardStyle" ng-mouseenter="main.mouseEnter($event,i)" ng-mouseleave="main.mouseLeave($event,i)">
+        <div ng-bind-html="main.matchingCardContent(i)"></div>
+      </div>
+    </div>
+    <div class="noUser cards" ng-if="(main.filterText.length!=0 && main.itemsFiltered.length==0 )">No User Found</div>
+
+
+  </div>
+
+
+
+
+
+
+
+</div>
